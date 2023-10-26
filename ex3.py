@@ -6,14 +6,14 @@ import random
 
 # 1. Create a list of rock, paper, scissors in a variable called rps.
 # "rps" means rock, paper, scissors
-rps = ['rock','paper','scissors']
+rps = list['rock','paper','scissors']
 
 # 2. Create a variable called user_choice that takes input from the user and stores it.
 #   Make sure the user enters rock, paper, or scissors.
-user_choice = "" # fix this, user input, hint: use input("...")
+user_choice = input(" make a choice rock, paper or scissors") # fix this, user input, hint: use input("...")
 
 # 3. Create a variable called computer_choice that randomly chooses from rps.
-computer_choice = "" # fix this, random choice from rps
+computer_choice = random.choice(rps) # fix this, random choice from rps
 
 # 4. Print out the user_choice and the computer_choice.
 print("You chose: " + user_choice)
@@ -24,7 +24,14 @@ print("The computer chose: " + computer_choice)
 if user_choice == computer_choice:
   print("It's a tie!")
 # write stuff here
-
+elif user_choice == 'rock' and computer_choice == 'scissors':
+  print("you win!")
+elif user_choice == 'scissors' and computer_choice == 'paper':
+  print("you win")
+elif user_choice == 'paper' and computer_choice == 'rock':
+  print("you win")
+else:
+  print("you lose")
 # rock beats scissors
 # paper beats rock
 # scissors beats paper
